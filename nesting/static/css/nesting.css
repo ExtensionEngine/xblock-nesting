@@ -1,0 +1,9 @@
+/* CSS for NestingXBlock */
+
+.nesting_block .count {
+    font-weight: bold;
+}
+
+.nesting_block p {
+    cursor: pointer;
+}
