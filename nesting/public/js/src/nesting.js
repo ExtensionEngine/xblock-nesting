@@ -1,6 +1,6 @@
 /* Javascript for NestingXBlock. */
-function NestingXBlock(runtime, element) {
-
+function NestingXBlock(runtime, element, context) {
+    $(element).css('width', context.width + '%');
     function updateCount(result) {
         $('.count', element).text(result.count);
     }
