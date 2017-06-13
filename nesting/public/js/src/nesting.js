@@ -1,22 +1,19 @@
 /* Javascript for NestingXBlock. */
 function NestingXBlock(runtime, element, context) {
-    $(element).css('width', context.width + '%');
-    function updateCount(result) {
-        $('.count', element).text(result.count);
-    }
 
-    var handlerUrl = runtime.handlerUrl(element, 'increment_count');
+  $(function ($) {
 
-    $('p', element).click(function(eventObject) {
-        $.ajax({
-            type: "POST",
-            url: handlerUrl,
-            data: JSON.stringify({"hello": "world"}),
-            success: updateCount
-        });
+    // Student view
+    $(element).css({
+      padding: context.styles.padding,
+      border: context.styles.border
     });
 
-    $(function ($) {
-        /* Here's where you'd do things on page load. */
+    $(element).closest('.vert').css({
+      width: 'calc(' + context.styles.width + ' - 3px)',
+      display: 'inline-block',
+      verticalAlign: 'top'
     });
+
+  });
 }

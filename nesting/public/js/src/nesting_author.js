@@ -1,31 +1,28 @@
 function NestingAuthorXBlock(runtime, element, context) {
 
-    var handlerUrl = runtime.handlerUrl(element, 'increment_count');
+  $(function ($) {
+    var $parent = $(element).closest('.studio-xblock-wrapper');
+    if($parent.length) {
 
-    $('p', element).click(function(eventObject) {
-        $.ajax({
-            type: "POST",
-            url: handlerUrl,
-            data: JSON.stringify({"hello": "world"}),
-            success: updateCount
-        });
-    });
+      $parent.css({
+        width: 'calc(' + context.styles.width + ' - 3px)',
+        display: 'inline-block',
+        verticalAlign: 'top'
+      });
+      
+    }
+    else {
+      $(element).css({
+        width: 'calc(' + context.styles.width + ' - 3px)',
+        display: 'inline-block',
+        verticalAlign: 'top'
+      });
+    }
 
-    $(function ($) {
-        var $parent = $(element).parents('.studio-xblock-wrapper');
-		if($parent.length) {
-			$parent.css({
-		    	width: context.width + '%',
-		    	display: 'inline-block',
-		    	verticalAlign: 'top'
-		    });
-		}
-		else {
-			$(element).css({
-		    	width: context.width + '%',
-		    	display: 'inline-block',
-		    	verticalAlign: 'top'
-		    });
-		}
-    });
+    /*
+    for(var i=0; i<5; i++){
+      $(element).next().remove();
+    }
+    */
+  });
 }
