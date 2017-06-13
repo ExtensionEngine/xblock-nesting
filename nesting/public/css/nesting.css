@@ -1,0 +1,28 @@
+ol {
+  margin: 0;
+  padding: 0; }
+
+.xmodule_display.xmodule_VideoModule .video {
+  margin: 0;
+  padding: 0; }
+
+.wrapper-xblock .xblock-header-secondary .meta-info {
+  width: auto; }
+.wrapper-xblock .xblock-header-secondary .actions-list {
+  width: auto; }
+.wrapper-xblock .xblock-header-primary {
+  position: relative; }
+  .wrapper-xblock .xblock-header-primary .header-details {
+    width: auto;
+    max-width: 30%; }
+  .wrapper-xblock .xblock-header-primary .header-actions {
+    width: auto;
+    max-width: 70%;
+    position: absolute;
+    right: 10px; }
+
+.course-wrapper .course-content .vert-mod .vert > .xblock-student_view {
+  border-bottom: 0;
+  margin-bottom: 0; }
+
+/*# sourceMappingURL=nesting.css.map */

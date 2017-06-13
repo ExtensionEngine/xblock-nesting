@@ -4,4 +4,3 @@
 *.sass-cache/*
 *.map
 *.DS_Store
-nesting/public/css/
