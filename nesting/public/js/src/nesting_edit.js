@@ -1,16 +1,21 @@
 function NestingEditXBlock(runtime, element, context) {
+
   var $el = $(element);
 
   $el.on('click', '.save-button', function() {
-    var styles = {}
 
-    $el.find('.input-container').each(function(){
-      var input= $(this).find('input');
-      var key = $(this).find('input').data('style');
-      styles[key] = $(input).val();
+    var styles = {}
+    $el.find('.input-container input[data-style]').each(function(){
+      var key = $(this).data('style');
+      styles[key] = $(this).val();
     })     
 
-    $.post(runtime.handlerUrl(element, 'studio_submit'), JSON.stringify(styles)).done(function(response) {
+    var data = {
+      width: $el.find('input[id=width]').val(),
+      styles: styles
+    }
+
+    $.post(runtime.handlerUrl(element, 'studio_submit'), JSON.stringify(data)).done(function(response) {
       window.location.reload(false);
     });
     

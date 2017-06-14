@@ -2,18 +2,14 @@
 function NestingXBlock(runtime, element, context) {
 
   $(function ($) {
-
-    // Student view
-    $(element).css({
-      padding: context.styles.padding,
-      border: context.styles.border
-    });
+    // Element seen in Student view
+    $(element).css(context.styles);
 
     $(element).closest('.vert').css({
-      width: 'calc(' + context.styles.width + ' - 3px)',
+      width: 'calc(' + context.width + '% - 3px)',
+      boxSizing: 'border-box',
       display: 'inline-block',
       verticalAlign: 'top'
     });
-
   });
 }

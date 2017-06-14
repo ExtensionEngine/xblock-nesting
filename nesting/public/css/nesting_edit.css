@@ -1,20 +1,31 @@
-.input-container {
-  margin: 10px; }
-  .input-container .input-title {
-    text-transform: capitalize; }
-  .input-container input {
-    width: 100px;
-    box-sizing: border-box;
-    background-color: #f2f2f2;
-    background-image: -webkit-linear-gradient(#f2f2f2, #fff);
-    background-image: linear-gradient(#f2f2f2, #fff);
-    padding: 6px 8px 8px;
-    border: 1px solid #b2b2b2;
-    border-radius: 2px;
-    background-color: #f2f2f2;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    font-family: 'Open Sans', sans-serif;
-    color: #4c4c4c;
-    outline: 0; }
+.predefined-styles {
+  width: 20%;
+  min-width: 250px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px; }
+  .predefined-styles .input-container {
+    margin: 10px;
+    position: relative;
+    min-height: 30px; }
+    .predefined-styles .input-container .input-title {
+      text-transform: capitalize; }
+    .predefined-styles .input-container input {
+      width: 100px;
+      box-sizing: border-box;
+      background-color: #f2f2f2;
+      background-image: -webkit-linear-gradient(#f2f2f2, #fff);
+      background-image: linear-gradient(#f2f2f2, #fff);
+      padding: 6px 8px 8px;
+      border: 1px solid #b2b2b2;
+      border-radius: 2px;
+      background-color: #f2f2f2;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+      font-family: 'Open Sans', sans-serif;
+      color: #4c4c4c;
+      outline: 0;
+      position: absolute;
+      right: 0;
+      height: 30px; }
 
 /*# sourceMappingURL=nesting_edit.css.map */

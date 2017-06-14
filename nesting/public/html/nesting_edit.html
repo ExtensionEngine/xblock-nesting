@@ -3,12 +3,20 @@
 <div class="xblock--nesting--editor editor-with-buttons">
 
   <div class="xblock-content">
-    {% for key, value in styles.iteritems %}
+  
+    <div class="predefined-styles">
       <div class="input-container">
-        <span class="input-title">{{ key }}</span>
-        <input data-style="{{ key }}" type="text" value="{{ value }}" />
+        <span class="input-title">{% trans "Width (%)" %}</span>
+        <input id="width" type="number" value="{{ width }}" />
       </div>
-    {% endfor %}
+      {% for key, value in styles.iteritems %}
+        <div class="input-container">
+          <span class="input-title">{{ key }}</span>
+          <input data-style="{{ key }}" type="text" value="{{ value }}" />
+        </div>
+      {% endfor %}
+    </div>
+    
   </div>
 
   <div class="xblock-actions">

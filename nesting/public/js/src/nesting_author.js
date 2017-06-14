@@ -2,21 +2,22 @@ function NestingAuthorXBlock(runtime, element, context) {
 
   $(function ($) {
     var $parent = $(element).closest('.studio-xblock-wrapper');
-    if($parent.length) {
 
+    if($parent.length) {
       $parent.css({
-        width: 'calc(' + context.styles.width + ' - 3px)',
+        width: 'calc(' + context.width + '% - 3px)',
         display: 'inline-block',
-        verticalAlign: 'top'
+        verticalAlign: 'top',
       });
-      
     }
     else {
+      // Element seen in Author view (Nesting XBlock that is inside another Nesting XBlock)
       $(element).css({
-        width: 'calc(' + context.styles.width + ' - 3px)',
+        width: 'calc(' + context.width + '% - 3px)',
         display: 'inline-block',
-        verticalAlign: 'top'
-      });
+        verticalAlign: 'top',
+        boxSizing: 'border-box',
+      }).css(context.styles);
     }
 
     /*
