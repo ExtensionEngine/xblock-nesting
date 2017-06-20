@@ -1,10 +1,9 @@
 {% load i18n %}
 
 <div class="xblock--nesting--editor editor-with-buttons">
-
   <div class="xblock-content">
-  
     <div class="predefined-styles">
+      <h1>{% trans "Select styling." %}</h1>
       <div class="input-container">
         <span class="input-title">{% trans "Width (%)" %}</span>
         <input id="width" type="number" value="{{ width }}" />
@@ -16,14 +15,29 @@
         </div>
       {% endfor %}
     </div>
-    
+    <div class="default-templates">
+      <h1>{% trans "Add template structure to this Nesting XBlock." %}</h1>
+      <h2>
+        <strong>{% trans "Note: " %}</strong>
+        {% trans "Clicking on 'Add' button will add selected template to current structure. If you wish to re-create or select another template structure, you will have to delete this Nesting XBlock and add another one." %}
+      </h2>
+      {% for key, value in templates.iteritems %}
+        <div class="template-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Profilewireframe.png" class="template-image">
+          <div class="add-template-btn" data-template="{{ key }}">Add {{ key }}</div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 
   <div class="xblock-actions">
     <span class="xblock-editor-error-message"></span>
     <ul>
-      <li class="action-item hidden">
+      <li class="action-item">
         <a href="#" class="button action-primary save-button">{% trans "Save" %}</a>
+      </li>
+      <li class="action-item no-display spinner">
+        <i class="fa fa-spinner fa-pulse" aria-hidden="true"></i> {% trans "Saving..." %}
       </li>
       <li class="action-item">
         <a href="#" class="button cancel-button">{% trans "Cancel" %}</a>

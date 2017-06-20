@@ -8,6 +8,7 @@ from xblockutils.studio_editable import StudioContainerXBlockMixin
 from xblockutils.resources import ResourceLoader
 
 from .default_data import DEFAULT_STYLES
+from .default_data import DEFAULT_TEMPLATES
 
 loader = ResourceLoader(__name__)
 
@@ -34,6 +35,13 @@ class NestingXBlock(StudioContainerXBlockMixin, XBlock):
         help='XBlock styles.'
     )
 
+    templates = Dict(
+        display_name='XBlock templates',
+        default=DEFAULT_TEMPLATES,
+        scope=Scope.settings,
+        help='Default XBlock templates.'
+    )
+
     has_children = True
 
     def resource_string(self, path):
@@ -44,7 +52,8 @@ class NestingXBlock(StudioContainerXBlockMixin, XBlock):
         context = {
             'display_name': self.display_name,
             'width': self.width,
-            'styles': self.styles
+            'styles': self.styles,
+            'templates': self.templates
         }
         frag = Fragment()
         frag.add_content(loader.render_template('/public/html/nesting_edit.html', context))

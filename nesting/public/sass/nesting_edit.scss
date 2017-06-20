@@ -1,12 +1,23 @@
-.predefined-styles{
-  width: 20%;
+.xblock--nesting--editor{
+  margin-bottom: 0 !important;
+}
+
+.hidden{
+    display: none;
+  }
+.predefined-styles, .default-templates{
   min-width: 250px;
   display: inline-block;
   vertical-align: top;
-  padding: 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.predefined-styles{
+  width: 20%;
 
   .input-container{
-    margin: 10px;
+    margin: 10px 0;
     position: relative;
     min-height: 30px;
 
@@ -33,4 +44,45 @@
       height: 30px;
     }
   }
+}
+
+
+.default-templates{
+  width: calc(80% - 10px);
+
+  h2{
+    padding: 10px 0;
+  }
+
+  .template-title{
+    text-transform: capitalize;
+  }
+
+  .template-container{
+    display: inline-block;
+    max-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    .add-template-btn{
+      width: 100%;
+      padding: 5px 10px;
+      background-color: #cbcbcb;
+      border-radius: 3px;
+      box-sizing: border-box;
+      text-transform: capitalize;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+
+  .template-image{
+    max-width: 200px;
+    width: 100%;
+  }
+}
+
+.no-display{
+  display: none !important;
+  background-color: green;
 }

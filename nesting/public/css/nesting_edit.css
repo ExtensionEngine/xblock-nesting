@@ -1,11 +1,20 @@
-.predefined-styles {
-  width: 20%;
+.xblock--nesting--editor {
+  margin-bottom: 0 !important; }
+
+.hidden {
+  display: none; }
+
+.predefined-styles, .default-templates {
   min-width: 250px;
   display: inline-block;
   vertical-align: top;
-  padding: 10px; }
+  padding: 10px 20px;
+  box-sizing: border-box; }
+
+.predefined-styles {
+  width: 20%; }
   .predefined-styles .input-container {
-    margin: 10px;
+    margin: 10px 0;
     position: relative;
     min-height: 30px; }
     .predefined-styles .input-container .input-title {
@@ -27,5 +36,33 @@
       position: absolute;
       right: 0;
       height: 30px; }
+
+.default-templates {
+  width: calc(80% - 10px); }
+  .default-templates h2 {
+    padding: 10px 0; }
+  .default-templates .template-title {
+    text-transform: capitalize; }
+  .default-templates .template-container {
+    display: inline-block;
+    max-width: 200px;
+    padding: 10px;
+    box-sizing: border-box; }
+    .default-templates .template-container .add-template-btn {
+      width: 100%;
+      padding: 5px 10px;
+      background-color: #cbcbcb;
+      border-radius: 3px;
+      box-sizing: border-box;
+      text-transform: capitalize;
+      cursor: pointer;
+      text-align: center; }
+  .default-templates .template-image {
+    max-width: 200px;
+    width: 100%; }
+
+.no-display {
+  display: none !important;
+  background-color: green; }
 
 /*# sourceMappingURL=nesting_edit.css.map */
