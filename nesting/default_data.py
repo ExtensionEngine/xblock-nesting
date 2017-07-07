@@ -8,11 +8,22 @@ DEFAULT_STYLES = {
 }
 
 DEFAULT_TEMPLATES = {
-  'template-1': {
+  'template-2': {
     'children': [
       {
-        'category': 'video',
-        'type': 'video',
+        'category': 'html',
+        'children': []
+      },
+      {
+        'category': 'html',
+        'children': []
+      },
+      {
+        'category': 'html',
+        'children': []
+      },
+      {
+        'category': 'html',
         'children': []
       },
       {
@@ -41,7 +52,7 @@ DEFAULT_TEMPLATES = {
       }
     ]
   },
-  'template-2': {
+  'template-1': {
     'children': [
       {
         'id': 'nesting-1',
@@ -97,6 +108,11 @@ DEFAULT_TEMPLATES = {
         'category': 'nesting',
         'width': 30,
         'children': [
+          {
+            'parent_id': 'nesting-2',
+            'category': 'html',
+            'children': []
+          },
           {
             'parent_id': 'nesting-2',
             'category': 'html',
