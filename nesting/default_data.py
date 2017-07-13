@@ -1,6 +1,6 @@
 DEFAULT_STYLES = {
   'margin': '0',
-  'padding': '0',
+  'padding': '10px',
   'border-top': '0',
   'border-right': '0',
   'border-bottom': '0',
