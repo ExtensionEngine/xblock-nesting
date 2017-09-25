@@ -44,8 +44,8 @@ function NestingEditXBlock(runtime, element, context) {
     $el.find('.input-container input[data-style]').each(function(){
       var key = $(this).data('style');
       styles[key] = $(this).val();
-    })     
-    
+    })
+
     xblock_data = {
       width: $el.find('input[id=width]').val(),
       styles: styles
@@ -70,7 +70,7 @@ function NestingEditXBlock(runtime, element, context) {
     if(i == template_list.length){
       setNestingXBlocks();
       return; //last call was last item in the array
-    } 
+    }
     $.ajax({
       url:'/xblock/',
       type: 'POST',
@@ -98,7 +98,7 @@ function NestingEditXBlock(runtime, element, context) {
     if(j == nesting_xblocks.length){
       studioSubmit();
       return; //last call was last item in the array
-    } 
+    }
     $.ajax({
       url:'/xblock/' + nesting_xblocks[j].locator + '/handler/studio_submit',
       type: 'POST',
