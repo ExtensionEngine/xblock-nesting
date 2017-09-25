@@ -1,6 +1,10 @@
 .xblock--nesting--editor {
   margin-bottom: 0 !important; }
 
+.xblock-content {
+  height: 375px;
+  overflow-y: scroll; }
+
 .hidden {
   display: none; }
 
@@ -64,5 +68,8 @@
 .no-display {
   display: none !important;
   background-color: green; }
+
+.xblock-actions {
+  padding: 15px 0 10px 0 !important; }
 
 /*# sourceMappingURL=nesting_edit.css.map */
